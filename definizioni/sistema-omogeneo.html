@@ -2,12 +2,43 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <title>Definizione: Sistema Omogeneo</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 10px;
+      margin: 0;
+    }
     details.details-sub {
-      margin-left: 20px;
+      margin-left: 1.5em;
+    }
+    details {
+      margin-bottom: 1em;
+    }
+    p, ul, h3 {
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+    h3 {
+      font-size: 1.2em;
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+      }
+      h3 {
+        font-size: 1.1em;
+      }
+      details.details-sub {
+        margin-left: 1em;
+      }
     }
   </style>
 </head>
@@ -23,11 +54,11 @@
 
   <details class="details-sub">
     <summary>Definizione Super Completa con Esempio e Casi Particolari</summary>
-    <p>Un sistema lineare \( S = (A, 0) \) è detto **omogeneo** quando i termini noti sono tutti pari a zero, cioè quando la m-pla dei termini noti è \( \mathbf{0} \). Questo significa che il sistema è del tipo:</p>
+    <p>Un sistema lineare \( S = (A, 0) \) è detto <strong>omogeneo</strong> quando i termini noti sono tutti pari a zero, cioè quando la m-pla dei termini noti è \( \mathbf{0} \). Questo significa che il sistema è del tipo:</p>
     \[
     A \mathbf{x} = \mathbf{0}
     \]
-    <p>dove \( A \) è la matrice dei coefficienti e \( \mathbf{x} \) è il vettore delle incognite. Il sistema è sempre compatibile, poiché la **soluzione banale** (cioè \( \mathbf{x} = \mathbf{0} \)) è sempre una soluzione valida.</p>
+    <p>dove \( A \) è la matrice dei coefficienti e \( \mathbf{x} \) è il vettore delle incognite. Il sistema è sempre compatibile, poiché la <strong>soluzione banale</strong> (cioè \( \mathbf{x} = \mathbf{0} \)) è sempre una soluzione valida.</p>
 
     <h3>Proprietà</h3>
     <ul>
