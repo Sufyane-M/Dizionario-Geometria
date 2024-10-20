@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dizionario di Algebra Lineare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Responsive styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dictionary ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .dictionary li {
+            margin: 0.5rem 0;
+        }
+
+        .dictionary a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .dictionary a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            main {
+                margin: 1rem;
+                padding: 0.5rem;
+            }
+
+            .dictionary a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dizionario di Algebra Lineare</h1>
+    </header>
+    <main>
+        <div class="dictionary">
+            <ul>
+                <li><a href="definizioni/sistema-omogeneo.html">Sistema Omogeneo</a></li>
+                <li><a href="definizioni/matrice-regolare.html">Matrice Regolare</a></li>
+                <li><a href="definizioni/sistema-lineare.html">Sistema Lineare</a></li>
+                <li><a href="definizioni/sottospazio-vettoriale.html">Sottospazio Vettoriale</a></li>
+                <li><a href="definizioni/rango-matrice.html">Rango di una Matrice</a></li>
+                <li><a href="definizioni/base-spazio-vettoriale.html">Base Spazio Vettoriale</a></li>
+                <li><a href="definizioni/dimensione-spazio-vettoriale.html">Dimensione Spazio Vettoriale</a></li>
+                <li><a href="definizioni/matrice-simile.html">Matrice Simile</a></li>
+                <li><a href="definizioni/matrice-ortogonale.html">Matrice Ortonale</a></li>
+            </ul>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
