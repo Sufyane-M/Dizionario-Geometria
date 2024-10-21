@@ -6,66 +6,54 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <link rel="stylesheet" href="style-definizione.css">
   <title>Definizione: Matrice Regolare</title>
-  <style>
-    details.details-sub {
-      margin-left: 20px;
-    }
-  </style>
 </head>
 <body>
 
-<details>
-  <summary><strong>Matrice Regolare</strong></summary>
+<h1>Matrice Regolare</h1>
 
-  <details class="details-sub">
-    <summary>Definizione Rapida</summary>
-    <p>Una matrice quadrata \( A \) è regolare (o invertibile) se il suo determinante è diverso da zero. In questo caso, esiste una matrice inversa \( A^{-1} \) tale che \( A \cdot A^{-1} = I \), dove \( I \) è la matrice identità.</p>
-  </details>
+<h2>Definizione Rapida</h2>
+<p>Una matrice quadrata \( A \) è regolare (o invertibile) se il suo determinante è diverso da zero. In questo caso, esiste una matrice inversa \( A^{-1} \) tale che \( A \cdot A^{-1} = I \), dove \( I \) è la matrice identità.</p>
 
-  <details class="details-sub">
-    <summary>Definizione Super Completa con Esempio e Casi Particolari</summary>
-    <p>Una matrice quadrata \( A \in \mathbb{R}^{n \times n} \) si dice regolare (o invertibile) se esiste un'altra matrice \( A^{-1} \in \mathbb{R}^{n \times n} \) tale che:</p>
-    \[
-    A \cdot A^{-1} = A^{-1} \cdot A = I_n
-    \]
-    <p>dove \( I_n \) è la matrice identità di ordine \( n \). Affinché una matrice quadrata sia regolare, il suo determinante deve essere diverso da zero:</p>
-    \[
-    \text{det}(A) \neq 0
-    \]
-    <p>Questo implica che la matrice \( A \) ammette una sola inversa, che si può calcolare utilizzando metodi algebrici (ad esempio, la formula per le matrici \( 2 \times 2 \), il metodo di Gauss o la cofattorizzazione). Se il determinante è zero, la matrice si dice singolare e non è invertibile.</p>
+<h2>Definizione Super Completa con Esempio e Casi Particolari</h2>
+<p>Una matrice quadrata \( A \in \mathbb{R}^{n \times n} \) si dice regolare (o invertibile) se esiste un'altra matrice \( A^{-1} \in \mathbb{R}^{n \times n} \) tale che:</p>
+\[
+A \cdot A^{-1} = A^{-1} \cdot A = I_n
+\]
+<p>dove \( I_n \) è la matrice identità di ordine \( n \). Affinché una matrice quadrata sia regolare, il suo determinante deve essere diverso da zero:</p>
+\[
+\text{det}(A) \neq 0
+\]
+<p>Questo implica che la matrice \( A \) ammette una sola inversa, che si può calcolare utilizzando metodi algebrici (ad esempio, la formula per le matrici \( 2 \times 2 \), il metodo di Gauss o la cofattorizzazione). Se il determinante è zero, la matrice si dice singolare e non è invertibile.</p>
 
-    <h3>Proprietà</h3>
-    <ul>
-      <li><strong>Invertibilità:</strong> Se \( A \) è regolare, esiste un'unica matrice inversa \( A^{-1} \).</li>
-      <li><strong>Determinante:</strong> La regolarità di \( A \) dipende da \( \text{det}(A) \neq 0 \).</li>
-      <li><strong>Applicazione lineare:</strong> Se \( A \) rappresenta un'applicazione lineare \( T \), essa è un isomorfismo (biunivoca).</li>
-      <li><strong>Soluzione unica nei sistemi lineari:</strong> Se \( A \) è la matrice dei coefficienti di un sistema \( A x = b \), allora il sistema ha una soluzione unica se \( \text{det}(A) \neq 0 \).</li>
-    </ul>
+<h3>Proprietà</h3>
+<ul>
+  <li><strong>Invertibilità:</strong> Se \( A \) è regolare, esiste un'unica matrice inversa \( A^{-1} \).</li>
+  <li><strong>Determinante:</strong> La regolarità di \( A \) dipende da \( \text{det}(A) \neq 0 \).</li>
+  <li><strong>Applicazione lineare:</strong> Se \( A \) rappresenta un'applicazione lineare \( T \), essa è un isomorfismo (biunivoca).</li>
+  <li><strong>Soluzione unica nei sistemi lineari:</strong> Se \( A \) è la matrice dei coefficienti di un sistema \( A x = b \), allora il sistema ha una soluzione unica se \( \text{det}(A) \neq 0 \).</li>
+</ul>
 
-    <h3>Esempio</h3>
-    <p>Consideriamo la matrice quadrata \( A \):</p>
-    \[
-    A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}
-    \]
-    <p>Calcoliamo il determinante di \( A \):</p>
-    \[
-    \text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
-    \]
-    <p>Poiché \( \text{det}(A) = 5 \neq 0 \), la matrice è regolare. Possiamo quindi calcolare la sua inversa \( A^{-1} \):</p>
-    \[
-    A^{-1} = \frac{1}{\text{det}(A)} \begin{bmatrix} 4 & -3 \\ -1 & 2 \end{bmatrix} = \frac{1}{5} \begin{bmatrix} 4 & -3 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 0.8 & -0.6 \\ -0.2 & 0.4 \end{bmatrix}
-    \]
+<h3>Esempio</h3>
+<p>Consideriamo la matrice quadrata \( A \):</p>
+\[
+A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}
+\]
+<p>Calcoliamo il determinante di \( A \):</p>
+\[
+\text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
+\]
+<p>Poiché \( \text{det}(A) = 5 \neq 0 \), la matrice è regolare. Possiamo quindi calcolare la sua inversa \( A^{-1} \):</p>
+\[
+A^{-1} = \frac{1}{\text{det}(A)} \begin{bmatrix} 4 & -3 \\ -1 & 2 \end{bmatrix} = \frac{1}{5} \begin{bmatrix} 4 & -3 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 0.8 & -0.6 \\ -0.2 & 0.4 \end{bmatrix}
+\]
 
-    <h3>Casi Particolari</h3>
-    <ul>
-      <li><strong>Matrice singolare:</strong> Se \( \text{det}(A) = 0 \), la matrice è singolare e non ammette inversa. Ad esempio, la matrice \( B = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix} \) ha \( \text{det}(B) = (1 \cdot 4) - (2 \cdot 2) = 0 \), quindi è singolare.</li>
-      <li><strong>Matrice identità:</strong> La matrice identità \( I_n \) è un caso particolare di matrice regolare, in quanto la sua inversa è sé stessa: \( I_n^{-1} = I_n \).</li>
-    </ul>
+<h3>Casi Particolari</h3>
+<ul>
+  <li><strong>Matrice singolare:</strong> Se \( \text{det}(A) = 0 \), la matrice è singolare e non ammette inversa. Ad esempio, la matrice \( B = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix} \) ha \( \text{det}(B) = (1 \cdot 4) - (2 \cdot 2) = 0 \), quindi è singolare.</li>
+  <li><strong>Matrice identità:</strong> La matrice identità \( I_n \) è un caso particolare di matrice regolare, in quanto la sua inversa è sé stessa: \( I_n^{-1} = I_n \).</li>
+</ul>
 
-    <p>In conclusione, una matrice è regolare se il suo determinante è diverso da zero, e la sua inversa può essere trovata con diversi metodi algebrici. Se il determinante è nullo, la matrice non è invertibile e viene detta singolare.</p>
-  </details>
-
-</details>
+<p>In conclusione, una matrice è regolare se il suo determinante è diverso da zero, e la sua inversa può essere trovata con diversi metodi algebrici. Se il determinante è nullo, la matrice non è invertibile e viene detta singolare.</p>
 
 </body>
 </html>
