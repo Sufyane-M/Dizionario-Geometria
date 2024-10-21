@@ -7,6 +7,7 @@
     --border-radius: 8px;
     --box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     --transition: all 0.3s ease;
+    --callout-bg: var(--secondary-color);
   }
   
   /* Stili di base */
@@ -41,6 +42,15 @@
   h3 {
     font-size: 1.4rem;
     color: #34495e;
+  }
+  
+  /* Stili speciali per titoli "Esempio" e "Casi Particolari" */
+  h3:matches(:contains("Esempio"), :contains("Casi Particolari")) {
+    background-color: var(--callout-bg);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    margin-bottom: 0;
   }
   
   p {
@@ -78,13 +88,29 @@
   }
   
   /* Box per esempi e casi particolari */
-  h3 + p, h3 + ul {
+  h3:matches(:contains("Esempio"), :contains("Casi Particolari")) + * {
     background: white;
     padding: 1.5rem;
-    border-radius: var(--border-radius);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     box-shadow: var(--box-shadow);
-    border-left: 4px solid var(--secondary-color);
-    margin: 1.5rem 0;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  /* Contenuto completo dell'esempio */
+  h3:contains("Esempio") ~ *:not(h3) {
+    background: white;
+    padding: 0 1.5rem;
+    margin: 0;
+  }
+  
+  h3:contains("Esempio") ~ h3 {
+    margin-top: 1.5rem;
+  }
+  
+  /* Ultimo elemento del callout esempio */
+  h3:contains("Esempio") ~ *:not(h3):last-of-type {
+    padding-bottom: 1.5rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
   }
   
   /* Elementi strong */
@@ -152,6 +178,7 @@
       --secondary-color: #3498db;
       --background-color: #2c3e50;
       --text-color: #ecf0f1;
+      --callout-bg: #3498db;
     }
     
     body {
@@ -159,6 +186,11 @@
     }
     
     ul, h3 + p, h3 + ul {
+      background: #34495e;
+    }
+    
+    h3:matches(:contains("Esempio"), :contains("Casi Particolari")) + *,
+    h3:contains("Esempio") ~ *:not(h3) {
       background: #34495e;
     }
   }
