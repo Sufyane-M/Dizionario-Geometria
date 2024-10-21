@@ -44,8 +44,8 @@
     color: #34495e;
   }
   
-  /* Stili speciali per titoli "Esempio" e "Casi Particolari" */
-  h3:matches(:contains("Esempio"), :contains("Casi Particolari")) {
+  /* Stili speciali per titoli Esempio e Casi Particolari */
+  h3.special-header {
     background-color: var(--callout-bg);
     color: white;
     padding: 0.5rem 1rem;
@@ -65,6 +65,7 @@
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     margin: 1.5rem 0;
+    list-style: none;
   }
   
   li {
@@ -81,14 +82,18 @@
     left: 0;
   }
   
-  /* Formule matematiche */
-  .MathJax {
-    font-size: 1.1em !important;
+  /* Contenitori per formule matematiche */
+  .math-container {
+    overflow-x: auto;
     margin: 1rem 0;
+    padding: 1rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
   }
   
-  /* Box per esempi e casi particolari */
-  h3:matches(:contains("Esempio"), :contains("Casi Particolari")) + * {
+  /* Callout per esempi e casi particolari */
+  .callout {
     background: white;
     padding: 1.5rem;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
@@ -96,21 +101,9 @@
     margin: 0 0 1.5rem 0;
   }
   
-  /* Contenuto completo dell'esempio */
-  h3:contains("Esempio") ~ *:not(h3) {
-    background: white;
-    padding: 0 1.5rem;
-    margin: 0;
-  }
-  
-  h3:contains("Esempio") ~ h3 {
-    margin-top: 1.5rem;
-  }
-  
-  /* Ultimo elemento del callout esempio */
-  h3:contains("Esempio") ~ *:not(h3):last-of-type {
-    padding-bottom: 1.5rem;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  /* Formule matematiche */
+  .MathJax {
+    font-size: 1.1em !important;
   }
   
   /* Elementi strong */
@@ -140,18 +133,10 @@
     p, li {
       font-size: 1rem;
     }
-  }
   
-  /* Effetti hover e focus */
-  a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    transition: var(--transition);
-  }
-  
-  a:hover {
-    color: #2980b9;
-    text-decoration: underline;
+    .math-container {
+      padding: 0.5rem;
+    }
   }
   
   /* Stampa */
@@ -165,7 +150,7 @@
       page-break-after: avoid;
     }
     
-    ul {
+    .callout, ul, .math-container {
       box-shadow: none;
       border: 1px solid #ddd;
     }
@@ -178,19 +163,17 @@
       --secondary-color: #3498db;
       --background-color: #2c3e50;
       --text-color: #ecf0f1;
-      --callout-bg: #3498db;
     }
     
     body {
       background-color: var(--background-color);
     }
     
-    ul, h3 + p, h3 + ul {
+    .callout, ul, .math-container {
       background: #34495e;
     }
     
-    h3:matches(:contains("Esempio"), :contains("Casi Particolari")) + *,
-    h3:contains("Esempio") ~ *:not(h3) {
-      background: #34495e;
+    h3.special-header {
+      background-color: var(--secondary-color);
     }
   }
