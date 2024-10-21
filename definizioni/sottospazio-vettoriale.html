@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Definizione: Sottospazio Vettoriale</title>
+  <style>
+    details.details-sub {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<details>
+  <summary><strong>Sottospazio Vettoriale</strong></summary>
+
+  <details class="details-sub">
+    <summary>Definizione Rapida</summary>
+    <p>Un sottoinsieme \( W \) di uno spazio vettoriale \( V \) è detto sottospazio vettoriale se, rispetto alle operazioni di \( V \), esso stesso è uno spazio vettoriale. In particolare, \( W \) deve essere chiuso rispetto alla somma vettoriale e al prodotto per uno scalare, e deve contenere il vettore nullo.</p>
+  </details>
+
+  <details class="details-sub">
+    <summary>Definizione Super Completa con Esempio e Casi Particolari</summary>
+    <p>Un **sottospazio vettoriale** \( W \) di uno spazio vettoriale \( V \) è un sottoinsieme di \( V \) tale che \( W \), con le stesse operazioni di somma vettoriale e prodotto per uno scalare definite in \( V \), forma uno spazio vettoriale. Per essere un sottospazio, \( W \) deve soddisfare le seguenti condizioni:</p>
+    <ul>
+      <li>**Chiusura rispetto alla somma vettoriale**: Se \( \mathbf{u}, \mathbf{v} \in W \), allora \( \mathbf{u} + \mathbf{v} \in W \).</li>
+      <li>**Chiusura rispetto al prodotto per uno scalare**: Se \( \mathbf{u} \in W \) e \( c \) è uno scalare, allora \( c \mathbf{u} \in W \).</li>
+      <li>**Vettore nullo**: \( W \) deve contenere il vettore nullo di \( V \).</li>
+    </ul>
+
+    <h3>Proprietà</h3>
+    <ul>
+      <li>Un sottospazio vettoriale è sempre chiuso rispetto alle operazioni di somma e moltiplicazione per uno scalare.</li>
+      <li>Il vettore nullo è sempre presente in un sottospazio vettoriale.</li>
+      <li>I sottospazi vettoriali sono, a loro volta, spazi vettoriali con la stessa struttura dello spazio vettoriale originale.</li>
+    </ul>
+
+    <h3>Esempio</h3>
+    <p>Consideriamo lo spazio vettoriale \( \mathbb{R}^3 \) e il sottoinsieme \( W \) costituito da tutti i vettori della forma:</p>
+    \[
+    W = \{ (x, y, 0) \mid x, y \in \mathbb{R} \}
+    \]
+    <p>Il sottoinsieme \( W \) è un sottospazio vettoriale di \( \mathbb{R}^3 \) poiché:</p>
+    <ul>
+      <li>È chiuso rispetto alla somma vettoriale: la somma di due vettori di \( W \) è ancora un vettore di \( W \).</li>
+      <li>È chiuso rispetto al prodotto per uno scalare: il prodotto di un vettore di \( W \) per uno scalare è ancora un vettore di \( W \).</li>
+      <li>Contiene il vettore nullo: il vettore \( (0, 0, 0) \) appartiene a \( W \).</li>
+    </ul>
+
+    <h3>Casi Particolari</h3>
+    <ul>
+      <li><strong>Sottospazio banale:</strong> Lo spazio costituito solo dal vettore nullo è un sottospazio di qualsiasi spazio vettoriale e viene chiamato **sottospazio banale**.</li>
+      <li><strong>Sottospazio improprio:</strong> L'intero spazio vettoriale \( V \) è un sottospazio di sé stesso e viene chiamato **sottospazio improprio**.</li>
+    </ul>
+
+    <p>In conclusione, un sottospazio vettoriale è un sottoinsieme di uno spazio vettoriale che, rispetto alle stesse operazioni, soddisfa tutte le proprietà di uno spazio vettoriale, inclusa la chiusura rispetto alla somma e al prodotto per uno scalare e la presenza del vettore nullo.</p>
+  </details>
+
+</details>
+
+</body>
+</html>
