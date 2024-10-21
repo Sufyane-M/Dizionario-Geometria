@@ -7,105 +7,78 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <link rel="stylesheet" href="style-definizione.css">
   <title>Definizione: Sistema Omogeneo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 10px;
-      margin: 0;
-    }
-    details.details-sub {
-      margin-left: 1.5em;
-    }
-    details {
-      margin-bottom: 1em;
-    }
-    p, ul, h3 {
-      max-width: 100%;
-      word-wrap: break-word;
-    }
-    h3 {
-      font-size: 1.2em;
-    }
-    ul {
-      padding-left: 1.5em;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-      }
-      h3 {
-        font-size: 1.1em;
-      }
-      details.details-sub {
-        margin-left: 1em;
-      }
-    }
-  </style>
 </head>
 <body>
 
-<details>
-  <summary><strong>Sistema Omogeneo</strong></summary>
+  <h1>Sistema Omogeneo</h1>
 
-  <details class="details-sub">
-    <summary>Definizione Rapida</summary>
-    <p>Un sistema lineare \( S = (A, 0) \), avente come termini noti la m-pla nulla (cioè tutti i termini noti sono uguali a zero), è detto omogeneo. Tale sistema è sempre compatibile, in quanto ammette sempre la soluzione banale in cui tutte le incognite sono nulle.</p>
-  </details>
+  <h2>Definizione Rapida</h2>
+  <p>Un sistema lineare \( S = (A, 0) \), avente come termini noti la m-pla nulla (cioè tutti i termini noti sono uguali a zero), è detto omogeneo. Tale sistema è sempre compatibile, in quanto ammette sempre la soluzione banale in cui tutte le incognite sono nulle.</p>
 
-  <details class="details-sub">
-    <summary>Definizione Super Completa con Esempio e Casi Particolari</summary>
-    <p>Un sistema lineare \( S = (A, 0) \) è detto <strong>omogeneo</strong> quando i termini noti sono tutti pari a zero, cioè quando la m-pla dei termini noti è \( \mathbf{0} \). Questo significa che il sistema è del tipo:</p>
+  <h2>Definizione Super Completa con Esempio e Casi Particolari</h2>
+  <p>Un sistema lineare \( S = (A, 0) \) è detto <strong>omogeneo</strong> quando i termini noti sono tutti pari a zero, cioè quando la m-pla dei termini noti è \( \mathbf{0} \). Questo significa che il sistema è del tipo:</p>
+
+  <div class="math-container">
     \[
     A \mathbf{x} = \mathbf{0}
     \]
-    <p>dove \( A \) è la matrice dei coefficienti e \( \mathbf{x} \) è il vettore delle incognite. Il sistema è sempre compatibile, poiché la <strong>soluzione banale</strong> (cioè \( \mathbf{x} = \mathbf{0} \)) è sempre una soluzione valida.</p>
+  </div>
 
-    <h3>Proprietà</h3>
+  <p>dove \( A \) è la matrice dei coefficienti e \( \mathbf{x} \) è il vettore delle incognite. Il sistema è sempre compatibile, poiché la <strong>soluzione banale</strong> (cioè \( \mathbf{x} = \mathbf{0} \)) è sempre una soluzione valida.</p>
+
+  <h3 class="special-header">Proprietà</h3>
+  <div class="callout">
     <ul>
       <li><strong>Compatibilità:</strong> Un sistema omogeneo è sempre compatibile, poiché ammette sempre la soluzione banale \( \mathbf{x} = \mathbf{0} \).</li>
       <li><strong>Possibili soluzioni:</strong> Oltre alla soluzione banale, un sistema omogeneo può ammettere infinite altre soluzioni se il rango della matrice dei coefficienti \( A \) è inferiore al numero delle incognite.</li>
       <li><strong>Determinante e soluzione:</strong> Se \( A \) è una matrice quadrata e \( \det(A) \neq 0 \), allora la soluzione banale è l'unica. Se \( \det(A) = 0 \), possono esistere infinite soluzioni.</li>
     </ul>
+  </div>
 
-    <h3>Esempio</h3>
+  <h3 class="special-header">Esempio</h3>
+  <div class="callout">
     <p>Consideriamo il seguente sistema omogeneo:</p>
-    \[
-    \begin{pmatrix}
-    2 & 3 \\
-    1 & 4
-    \end{pmatrix}
-    \begin{pmatrix}
-    x_1 \\
-    x_2
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-    0 \\
-    0
-    \end{pmatrix}
-    \]
+    <div class="math-container">
+      \[
+      \begin{pmatrix}
+      2 & 3 \\
+      1 & 4
+      \end{pmatrix}
+      \begin{pmatrix}
+      x_1 \\
+      x_2
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+      0 \\
+      0
+      \end{pmatrix}
+      \]
+    </div>
     <p>Questo è un sistema omogeneo con due equazioni in due incognite. La soluzione banale è \( x_1 = 0 \) e \( x_2 = 0 \), ma potrebbero esistere altre soluzioni a seconda del rango della matrice dei coefficienti.</p>
+  </div>
 
-    <h3>Casi Particolari</h3>
+  <h3 class="special-header">Casi Particolari</h3>
+  <div class="callout">
     <ul>
       <li><strong>Sistema omogeneo con soluzione unica:</strong> Se la matrice \( A \) è quadrata e \( \det(A) \neq 0 \), la soluzione banale è l'unica. Ad esempio, per la matrice:
-      \[
-      A = \begin{pmatrix} 2 & 3 \\ 1 & 4 \end{pmatrix}
-      \]
-      il determinante è \( \det(A) = 5 \), quindi la soluzione banale \( x_1 = 0 \) e \( x_2 = 0 \) è l'unica possibile.</li>
-
+        <div class="math-container">
+          \[
+          A = \begin{pmatrix} 2 & 3 \\ 1 & 4 \end{pmatrix}
+          \]
+        </div>
+        il determinante è \( \det(A) = 5 \), quindi la soluzione banale \( x_1 = 0 \) e \( x_2 = 0 \) è l'unica possibile.</li>
       <li><strong>Sistema omogeneo con infinite soluzioni:</strong> Se \( A \) è una matrice non quadrata o il determinante di \( A \) è pari a zero, il sistema può ammettere infinite soluzioni oltre a quella banale. Ad esempio, la matrice:
-      \[
-      A = \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix}
-      \]
-      ha \( \det(A) = 0 \), quindi esistono infinite soluzioni.</li>
+        <div class="math-container">
+          \[
+          A = \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix}
+          \]
+        </div>
+        ha \( \det(A) = 0 \), quindi esistono infinite soluzioni.</li>
     </ul>
+  </div>
 
-    <p>In conclusione, un sistema omogeneo ammette sempre la soluzione banale, ma può anche ammettere soluzioni non banali a seconda delle proprietà della matrice dei coefficienti.</p>
-  </details>
-
-</details>
+  <p>In conclusione, un sistema omogeneo ammette sempre la soluzione banale, ma può anche ammettere soluzioni non banali a seconda delle proprietà della matrice dei coefficienti.</p>
 
 </body>
 </html>
