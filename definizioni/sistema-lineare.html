@@ -2,74 +2,70 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <link rel="stylesheet" href="style-definizione.css">
   <title>Definizione: Sistema Lineare</title>
-  <style>
-    details.details-sub {
-      margin-left: 20px;
-    }
-  </style>
 </head>
 <body>
 
-<details>
-  <summary><strong>Sistema Lineare</strong></summary>
+<h1>Sistema Lineare</h1>
 
-  <details class="details-sub">
-    <summary>Definizione Rapida</summary>
-    <p>Un sistema lineare è un insieme di \( m \) equazioni lineari in \( n \) incognite, che può essere rappresentato come una coppia \( S = (A, b) \), dove \( A \) è una matrice \( m 	imes n \) detta matrice dei coefficienti e \( b \) è la m-pla dei termini noti.</p>
-  </details>
+<h2>Definizione Completa</h2>
+<p>Un <strong>sistema lineare</strong> è un insieme di \( m \) equazioni lineari in \( n \) incognite che può essere rappresentato come una coppia \( S = (A, b) \), dove:</p>
+<ul>
+  <li>\( A \) è una matrice \( m \times n \) detta <strong>matrice dei coefficienti</strong>.</li>
+  <li>\( b \) è la <strong>m-pla dei termini noti</strong>.</li>
+</ul>
+<p>In forma esplicita, un sistema lineare può essere scritto come:</p>
+<div class="math-container">
+  \[
+  \begin{cases}
+  a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1 \\
+  a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2 \\
+  \vdots \\
+  a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
+  \end{cases}
+  \]
+</div>
+<p>Dove \( a_{ij} \) sono i coefficienti e \( b_i \) sono i termini noti per ogni equazione.</p>
 
-  <details class="details-sub">
-    <summary>Definizione Super Completa con Esempio e Casi Particolari</summary>
-    <p>Un **sistema lineare** è un insieme di \( m \) equazioni lineari in \( n \) incognite che può essere rappresentato come una coppia \( S = (A, b) \), dove:</p>
-    <ul>
-      <li>\( A \) è una matrice \( m 	imes n \) detta **matrice dei coefficienti**.</li>
-      <li>\( b \) è la **m-pla dei termini noti**.</li>
-    </ul>
-    <p>In forma esplicita, un sistema lineare può essere scritto come:</p>
-    \[
-    \begin{cases}
-    a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1 \\
-    a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2 \\
-    \vdots \\
-    a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
-    \end{cases}
-    \]
-    <p>Dove \( a_{ij} \) sono i coefficienti e \( b_i \) sono i termini noti per ogni equazione.</p>
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Compatibilità:</strong> Un sistema lineare è detto <strong>compatibile</strong> se ammette almeno una soluzione; altrimenti è <strong>incompatibile</strong>.</li>
+    <li><strong>Numero di soluzioni:</strong> Un sistema lineare può avere una sola soluzione, nessuna soluzione, o infinite soluzioni.</li>
+    <li><strong>Tipologia di sistema:</strong> Se \( m = n \) e il determinante di \( A \) è diverso da zero, il sistema ha una soluzione unica.</li>
+  </ul>
+</div>
 
-    <h3>Proprietà</h3>
-    <ul>
-      <li><strong>Compatibilità:</strong> Un sistema lineare è detto **compatibile** se ammette almeno una soluzione; altrimenti è **incompatibile**.</li>
-      <li><strong>Numero di soluzioni:</strong> Un sistema lineare può avere una sola soluzione, nessuna soluzione, o infinite soluzioni.</li>
-      <li><strong>Tipologia di sistema:</strong> Se \( m = n \) e il determinante di \( A \) è diverso da zero, il sistema ha una soluzione unica.</li>
-    </ul>
-
-    <h3>Esempio</h3>
-    <p>Consideriamo il seguente sistema lineare con due equazioni e due incognite:</p>
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo il seguente sistema lineare con due equazioni e due incognite:</p>
+  <div class="math-container">
     \[
     \begin{cases}
     2x_1 + 3x_2 = 5 \\
     x_1 + 4x_2 = 6
     \end{cases}
     \]
-    <p>Questo sistema può essere rappresentato nella forma matriciale \( S = (A, b) \), dove:</p>
-    \[
-    A = \begin{pmatrix} 2 & 3 \\ 1 & 4 \end{pmatrix}, \quad b = \begin{pmatrix} 5 \\ 6 \end{pmatrix}
-    \]
-    <p>Per risolvere il sistema, possiamo usare diversi metodi come il metodo di sostituzione, il metodo di eliminazione di Gauss, o il calcolo dell'inversa della matrice \( A \) (se esiste).</p>
+  </div>
+  <p>Questo sistema può essere rappresentato nella forma matriciale \( S = (A, b) \), dove:</p>
+  <div class="math-container">
+    \[ A = \begin{pmatrix} 2 & 3 \\ 1 & 4 \end{pmatrix}, \quad b = \begin{pmatrix} 5 \\ 6 \end{pmatrix} \]
+  </div>
+  <p>Per risolvere il sistema, possiamo usare diversi metodi come il metodo di sostituzione, il metodo di eliminazione di Gauss, o il calcolo dell'inversa della matrice \( A \) (se esiste).</p>
+</div>
 
-    <h3>Casi Particolari</h3>
-    <ul>
-      <li><strong>Sistema compatibile determinato:</strong> Se il rango della matrice dei coefficienti \( A \) è uguale al numero delle incognite, il sistema ha una soluzione unica.</li>
-      <li><strong>Sistema compatibile indeterminato:</strong> Se il rango della matrice dei coefficienti \( A \) è inferiore al numero delle incognite, il sistema ha infinite soluzioni.</li>
-      <li><strong>Sistema incompatibile:</strong> Se il rango della matrice dei coefficienti \( A \) è diverso dal rango della matrice completa (che include i termini noti), il sistema non ha soluzioni.</li>
-    </ul>
-  </details>
-
-</details>
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Sistema compatibile determinato:</strong> Se il rango della matrice dei coefficienti \( A \) è uguale al numero delle incognite, il sistema ha una soluzione unica.</li>
+    <li><strong>Sistema compatibile indeterminato:</strong> Se il rango della matrice dei coefficienti \( A \) è inferiore al numero delle incognite, il sistema ha infinite soluzioni.</li>
+    <li><strong>Sistema incompatibile:</strong> Se il rango della matrice dei coefficienti \( A \) è diverso dal rango della matrice completa (che include i termini noti), il sistema non ha soluzioni.</li>
+  </ul>
+</div>
 
 </body>
 </html>
