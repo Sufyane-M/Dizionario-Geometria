@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Polinomio Caratteristico di una Matrice</title>
+</head>
+<body>
+
+<h1>Polinomio Caratteristico di una Matrice</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Il <strong>polinomio caratteristico</strong> di una matrice quadrata \( A \) è il polinomio ottenuto calcolando il determinante della matrice \( A - \lambda I \), dove \( \lambda \) è una variabile scalare e \( I \) è la matrice identità dello stesso ordine di \( A \).</p>
+
+<h2>Definizione Completa</h2>
+<p>Il <strong>polinomio caratteristico</strong> di una matrice quadrata \( A \) di ordine \( n \) è un polinomio di grado \( n \) che si ottiene calcolando il determinante della matrice \( A - \lambda I \), dove \( \lambda \) è una variabile scalare e \( I \) è la matrice identità di ordine \( n \). In formule, il polinomio caratteristico \( p(\lambda) \) è definito come:</p>
+<div class="math-container">
+  \[
+  p(\lambda) = \text{det}(A - \lambda I)
+  \]
+</div>
+<p>Il polinomio caratteristico è fondamentale nello studio degli <strong>autovalori</strong> di una matrice, poiché le sue radici corrispondono agli autovalori di \( A \). Gli autovalori sono i valori di \( \lambda \) per i quali il determinante della matrice \( A - \lambda I \) è uguale a zero.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Il polinomio caratteristico è un <strong>polinomio monico</strong> di grado \( n \), dove \( n \) è l'ordine della matrice \( A \).</li>
+    <li>Le radici del polinomio caratteristico corrispondono agli <strong>autovalori</strong> della matrice.</li>
+    <li>Il <strong>teorema di Cayley-Hamilton</strong> afferma che ogni matrice quadrata soddisfa la propria equazione caratteristica, ovvero sostituendo la matrice nel proprio polinomio caratteristico si ottiene la matrice nulla.</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo la matrice quadrata \( A \) di ordine 2:</p>
+  <div class="math-container">
+    \[
+    A = \begin{bmatrix} 2 & 1 \\ 1 & 3 \end{bmatrix}
+    \]
+  </div>
+  <p>Calcoliamo il polinomio caratteristico \( p(\lambda) \) utilizzando il determinante di \( A - \lambda I \):</p>
+  <div class="math-container">
+    \[
+    A - \lambda I = \begin{bmatrix} 2 - \lambda & 1 \\ 1 & 3 - \lambda \end{bmatrix}
+    \]
+  </div>
+  <div class="math-container">
+    \[
+    p(\lambda) = \text{det}(A - \lambda I) = (2 - \lambda)(3 - \lambda) - (1 \cdot 1)
+    \]
+  </div>
+  <div class="math-container">
+    \[
+    p(\lambda) = \lambda^2 - 5\lambda + 5
+    \]
+  </div>
+  <p>Il polinomio caratteristico di \( A \) è quindi:</p>
+  <div class="math-container">
+    \[
+    p(\lambda) = \lambda^2 - 5\lambda + 5
+    \]
+  </div>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Autovalori:</strong> Gli <strong>autovalori</strong> della matrice \( A \) sono le radici del polinomio caratteristico. Nel nostro esempio, gli autovalori sono le soluzioni dell'equazione \( \lambda^2 - 5\lambda + 5 = 0 \).</li>
+    <li><strong>Teorema di Cayley-Hamilton:</strong> Il <strong>teorema di Cayley-Hamilton</strong> afferma che ogni matrice soddisfa la propria equazione caratteristica, ovvero se si sostituisce la matrice \( A \) al posto di \( \lambda \) nel polinomio caratteristico, si ottiene la matrice nulla.</li>
+    <li><strong>Matrice Diagonale:</strong> Se una matrice è <strong>diagonale</strong>, il polinomio caratteristico è semplicemente il prodotto \( (\lambda - d_1)(\lambda - d_2) \dots (\lambda - d_n) \), dove \( d_i \) sono gli elementi sulla diagonale della matrice.</li>
+  </ul>
+  <p>In conclusione, il polinomio caratteristico è uno strumento essenziale per determinare gli autovalori di una matrice e per analizzare le sue proprietà algebriche. Il teorema di Cayley-Hamilton, che collega il polinomio caratteristico alla matrice stessa, è una delle applicazioni più importanti di questo concetto in algebra lineare.</p>
+</div>
+
+</body>
+</html>

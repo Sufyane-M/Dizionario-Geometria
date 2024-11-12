@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Sistema Minimo</title>
+</head>
+<body>
+
+<h1>Sistema Minimo</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Un <strong>sistema minimo</strong> è un insieme di equazioni lineari tale che nessuna delle equazioni può essere eliminata senza modificare l'insieme delle soluzioni del sistema. In altre parole, ogni equazione del sistema è indispensabile per determinare la soluzione.</p>
+
+<h2>Definizione Completa</h2>
+<p>Un <strong>sistema minimo</strong> è un sistema lineare in cui tutte le equazioni sono necessarie per descrivere completamente l'insieme delle soluzioni. Se una qualsiasi delle equazioni viene rimossa, l'insieme delle soluzioni cambia. In altre parole, un sistema è minimo se nessuna equazione è ridondante rispetto alle altre, e tutte le equazioni contribuiscono in modo essenziale alla definizione del sistema.</p>
+
+<p>Consideriamo un sistema lineare rappresentato come:</p>
+<div class="math-container">
+  \[
+  \begin{cases}
+  a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1 \\
+  a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2 \\
+  \vdots \\
+  a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
+  \end{cases}
+  \]
+</div>
+<p>Il sistema è <strong>minimo</strong> se nessuna delle equazioni può essere ottenuta come combinazione lineare delle altre equazioni. Se fosse possibile ottenere una delle equazioni come combinazione delle altre, quella equazione sarebbe ridondante, e il sistema non sarebbe minimo.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Un sistema minimo non ha <strong>equazioni ridondanti</strong>. Ogni equazione fornisce un'informazione unica che non può essere dedotta dalle altre equazioni.</li>
+    <li>Il <strong>rango</strong> della matrice dei coefficienti è uguale al numero di equazioni del sistema se il sistema è minimo e <strong>compatibile</strong>.</li>
+    <li>Per un sistema lineare rappresentato in forma <strong>ridotta a gradini</strong>, un sistema minimo ha tutte le righe diverse da zero, poiché una riga nulla indicherebbe un'equazione ridondante.</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo il seguente sistema lineare in \( \mathbb{R}^2 \):</p>
+  <div class="math-container">
+    \[
+    \begin{cases}
+    2x_1 + 3x_2 = 5 \\
+    4x_1 + 6x_2 = 10
+    \end{cases}
+    \]
+  </div>
+  <p>In questo caso, la seconda equazione è una <strong>combinazione lineare</strong> della prima, poiché è il doppio della prima equazione. Di conseguenza, questo sistema non è <strong>minimo</strong>, poiché la seconda equazione è ridondante e non fornisce informazioni aggiuntive. Il sistema minimo equivalente è:</p>
+  <div class="math-container">
+    \[
+    2x_1 + 3x_2 = 5
+    \]
+  </div>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Sistema con Equazioni Ridondanti:</strong> Se un sistema contiene equazioni che possono essere espresse come combinazioni lineari delle altre, quelle equazioni sono <strong>ridondanti</strong> e possono essere eliminate senza modificare l'insieme delle soluzioni.</li>
+    <li><strong>Forma Ridotta a Gradini:</strong> Un sistema rappresentato nella forma ridotta a gradini che contiene righe nulle non è minimo, poiché le righe nulle indicano equazioni ridondanti che non influenzano l'insieme delle soluzioni.</li>
+    <li><strong>Sistema di Cramer:</strong> Un sistema di <strong>Cramer</strong> è sempre minimo, poiché tutte le equazioni sono necessarie per determinare la soluzione unica, dato che il determinante della matrice dei coefficienti è diverso da zero.</li>
+  </ul>
+  <p>In conclusione, un sistema minimo è un sistema lineare che non contiene equazioni ridondanti e in cui ogni equazione è necessaria per determinare l'insieme delle soluzioni. Questo concetto è utile per semplificare i sistemi lineari e garantire che tutte le equazioni fornite siano indispensabili per descrivere il comportamento del sistema.</p>
+</div>
+
+</body>
+</html>
