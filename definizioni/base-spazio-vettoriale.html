@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Base di uno Spazio Vettoriale</title>
+</head>
+<body>
+
+<h1>Base di uno Spazio Vettoriale</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Una <strong>base</strong> di uno spazio vettoriale \( V \) è un insieme di vettori linearmente indipendenti che generano \( V \). Ogni vettore in \( V \) può essere espresso come combinazione lineare dei vettori di base.</p>
+
+<h2>Definizione Completa</h2>
+<p>Una <strong>base</strong> di uno spazio vettoriale \( V \) su un campo \( \mathbb{K} \) è un insieme di vettori \( \{ \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \} \) tale che:</p>
+<ul>
+  <li>I vettori sono <strong>linearmente indipendenti</strong>, ovvero nessuno di essi può essere scritto come combinazione lineare degli altri.</li>
+  <li>Essi <strong>generano</strong> lo spazio vettoriale \( V \), cioè ogni vettore in \( V \) può essere espresso come combinazione lineare dei vettori di base.</li>
+</ul>
+<p>In altre parole, una base è un insieme minimo di vettori che permette di descrivere completamente tutti i vettori dello spazio \( V \). Il numero di vettori in una base di uno spazio vettoriale è detto <strong>dimensione</strong> dello spazio vettoriale.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Ogni spazio vettoriale ha una o più basi, e tutte le basi hanno lo stesso <strong>numero di vettori</strong> (detto <strong>dimensione</strong> dello spazio).</li>
+    <li>I vettori di una base sono <strong>linearmente indipendenti</strong> e <strong>generano</strong> lo spazio vettoriale.</li>
+    <li>La rappresentazione di un vettore in termini di una base è <strong>univoca</strong>: ogni vettore nello spazio può essere scritto in un solo modo come combinazione lineare dei vettori di base.</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo lo spazio vettoriale \( \mathbb{R}^3 \), costituito da tutti i vettori tridimensionali. Una possibile base di \( \mathbb{R}^3 è costituita dai seguenti vettori:</p>
+  <div class="math-container">
+    \[
+    \mathbf{e}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \quad \mathbf{e}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \quad \mathbf{e}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+    \]
+  </div>
+  <p>Questa è la <strong>base canonica</strong> di \( \mathbb{R}^3 \), in quanto ogni vettore di \( \mathbb{R}^3 \) può essere scritto come combinazione lineare di \( \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3 \). Ad esempio:</p>
+  <div class="math-container">
+    \[
+    \mathbf{v} = \begin{bmatrix} 3 \\ -2 \\ 5 \end{bmatrix} = 3\mathbf{e}_1 - 2\mathbf{e}_2 + 5\mathbf{e}_3
+    \]
+  </div>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Base Canonica:</strong> La <strong>base canonica</strong> di \( \mathbb{R}^n \) è costituita dai vettori che hanno un 1 in una componente e 0 in tutte le altre. Ad esempio, in \( \mathbb{R}^3 \), la base canonica è \( \{ \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3 \} \).</li>
+    <li><strong>Dimensione:</strong> La <strong>dimensione</strong> di uno spazio vettoriale è il numero di vettori in qualsiasi sua base. Ad esempio, lo spazio vettoriale \( \mathbb{R}^3 \) ha dimensione 3.</li>
+    <li><strong>Basi Diverse:</strong> Uno spazio vettoriale può avere <strong>basi diverse</strong>. Ad esempio, un'altra base di \( \mathbb{R}^2 \) può essere costituita dai vettori \( \mathbf{v}_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix} \) e \( \mathbf{v}_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix} \), purché siano linearmente indipendenti e generino tutto lo spazio.</li>
+  </ul>
+  <p>In conclusione, una base di uno spazio vettoriale è un insieme di vettori che permette di descrivere in modo univoco ogni elemento dello spazio. La scelta della base è fondamentale per la rappresentazione dei vettori e per lo studio delle trasformazioni lineari in algebra lineare.</p>
+</div>
+
+</body>
+</html>

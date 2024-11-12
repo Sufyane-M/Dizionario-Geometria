@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Matrice Simile</title>
+</head>
+<body>
+
+<h1>Matrice Simile</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Due matrici \( A \) e \( B \) si dicono <strong>simili</strong> se esiste una matrice invertibile \( P \) tale che \( A = P B P^{-1} \). La similarità indica che \( A \) e \( B \) rappresentano lo stesso operatore lineare rispetto a basi diverse.</p>
+
+<h2>Definizione Completa</h2>
+<p>Due matrici \( A \) e \( B \) si dicono <strong>simili</strong> se esiste una matrice invertibile \( P \) tale che:</p>
+<div class="math-container">
+  \[
+  A = P B P^{-1}
+  \]
+</div>
+<p>La similarità tra matrici è una relazione che indica che le matrici \( A \) e \( B \) rappresentano lo stesso operatore lineare rispetto a basi diverse. In altre parole, \( A \) e \( B \) sono due rappresentazioni differenti dello stesso oggetto matematico, ma in sistemi di riferimento (o basi) diversi.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Le matrici simili hanno lo stesso <strong>determinante</strong> e lo stesso <strong>rango</strong>.</li>
+    <li>Le matrici simili hanno gli stessi <strong>autovalori</strong>, anche se gli autovettori possono essere diversi.</li>
+    <li>La similarità è una relazione di equivalenza, quindi è <strong>riflessiva</strong>, <strong>simmetrica</strong> e <strong>transitiva</strong>.</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo le matrici:</p>
+  <div class="math-container">
+    \[
+    A = \begin{bmatrix} 2 & 1 \\ 0 & 3 \end{bmatrix}, \quad B = \begin{bmatrix} 3 & -1 \\ 0 & 2 \end{bmatrix}
+    \]
+  </div>
+  <p>Le matrici \( A \) e \( B \) sono simili se esiste una matrice invertibile \( P \) tale che:</p>
+  <div class="math-container">
+    \[
+    A = P B P^{-1}
+    \]
+  </div>
+  <p>Supponiamo che:</p>
+  <div class="math-container">
+    \[
+    P = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}
+    \]
+  </div>
+  <p>Calcoliamo \( P^{-1} \):</p>
+  <div class="math-container">
+    \[
+    P^{-1} = \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix}
+    \]
+  </div>
+  <p>Verifichiamo se \( A = P B P^{-1} \) risulta corretto. Se sì, allora le matrici \( A \) e \( B \) sono simili.</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Autovalori invarianti:</strong> Due matrici simili hanno lo stesso insieme di autovalori, anche se possono avere autovettori differenti.</li>
+    <li><strong>Diagonalizzabilità:</strong> Se una matrice è diagonalizzabile, allora è simile a una matrice diagonale. Questo significa che esiste una matrice invertibile \( P \) tale che \( A = P D P^{-1} \), dove \( D \) è una matrice diagonale.</li>
+  </ul>
+  <p>In conclusione, la similarità tra matrici rappresenta una relazione che mantiene invariata la struttura dell'operatore lineare, permettendo di passare da una rappresentazione all'altra attraverso un cambio di base. Questo concetto è utile in molte aree della matematica applicata, come la teoria dei sistemi dinamici e l'algebra lineare.</p>
+</div>
+
+</body>
+</html>
