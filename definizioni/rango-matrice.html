@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Rango di una Matrice</title>
+</head>
+<body>
+
+<h1>Rango di una Matrice</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Il rango di una matrice \( A \) è il massimo numero di colonne (o righe) linearmente indipendenti di \( A \). Determina il numero massimo di vettori linearmente indipendenti che si possono ottenere dalle colonne o dalle righe della matrice.</p>
+
+<h2>Definizione Completa</h2>
+<p>Il <strong>rango</strong> di una matrice \( A \) è un concetto fondamentale in algebra lineare che rappresenta il massimo numero di colonne (o righe) linearmente indipendenti di \( A \). In altre parole, il rango indica la dimensione del sottospazio generato dalle colonne (o dalle righe) della matrice.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Il rango delle colonne è uguale al rango delle righe.</li>
+    <li>Il rango di una matrice è anche la dimensione dello <strong>spazio colonna</strong> o dello <strong>spazio riga</strong> della matrice.</li>
+    <li>Una matrice è <strong>invertibile</strong> se e solo se il suo rango è uguale alla sua dimensione (per una matrice quadrata).</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo la matrice:</p>
+  <div class="math-container">
+    \[
+    A = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 3 & 6 & 9 \end{bmatrix}
+    \]
+  </div>
+  <p>Le righe della matrice \( A \) sono linearmente dipendenti, poiché ogni riga è un multiplo della prima. Pertanto, il rango di \( A \) è 1, poiché solo una riga (o colonna) è linearmente indipendente.</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Matrice a pieno rango:</strong> Una matrice quadrata di ordine \( n \) ha rango massimo se il rango è \( n \). Ciò significa che tutte le sue colonne (o righe) sono linearmente indipendenti.</li>
+    <li><strong>Matrice di rango zero:</strong> Una matrice nulla ha rango zero, poiché non ci sono colonne o righe linearmente indipendenti.</li>
+  </ul>
+  <p>Il rango di una matrice è utile per determinare la <strong>compatibilità</strong> di un sistema lineare. Un sistema lineare ha soluzioni se il rango della matrice dei coefficienti è uguale al rango della matrice completa (matrice dei coefficienti con il vettore dei termini noti).</p>
+</div>
+
+</body>
+</html>
