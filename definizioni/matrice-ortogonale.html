@@ -2,61 +2,69 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
   <title>Definizione: Matrice Ortogonale</title>
 </head>
 <body>
 
-<details>
-  <summary><strong>Matrice Ortogonale</strong></summary>
+<h1>Matrice Ortogonale</h1>
 
-  <details class="details-sub">
-    <summary>Definizione Rapida</summary>
-    <p>Una matrice quadrata \( A \) è detta ortogonale se le sue colonne (e quindi anche le sue righe) formano un insieme ortonormale rispetto al prodotto scalare standard. In altre parole, \( A \) è ortogonale se \( A A^T = I \), dove \( I \) è la matrice identità.</p>
-  </details>
+<h2>Definizione Rapida</h2>
+<p>Una matrice quadrata \( A \) è detta <strong>ortogonale</strong> se le sue colonne (e quindi anche le sue righe) formano un insieme ortonormale rispetto al prodotto scalare standard. In altre parole, \( A \) è ortogonale se \( A A^T = I \), dove \( I \) è la matrice identità.</p>
 
-  <details class="details-sub">
-    <summary>Definizione Super Completa con Esempio e Casi Particolari</summary>
-    <p>Una **matrice ortogonale** è una matrice quadrata \( A \) i cui vettori colonna (e quindi anche i vettori riga) sono ortonormali tra loro rispetto al prodotto scalare standard. Questo significa che:</p>
-    \[
-    A A^T = A^T A = I
-    \]
-    <p>dove \( A^T \) indica la matrice trasposta di \( A \), e \( I \) è la matrice identità di dimensione opportuna.</p>
-    <p>In altre parole, una matrice ortogonale \( A \) soddisfa la proprietà per cui la moltiplicazione di \( A \) per la sua trasposta dà come risultato la matrice identità. Questo implica che le colonne (e le righe) di \( A \) sono vettori ortonormali.</p>
+<h2>Definizione Completa</h2>
+<p>Una <strong>matrice ortogonale</strong> è una matrice quadrata \( A \) i cui vettori colonna (e quindi anche i vettori riga) sono ortonormali tra loro rispetto al prodotto scalare standard. Questo significa che:</p>
+<div class="math-container">
+  \[
+  A A^T = A^T A = I
+  \]
+</div>
+<p>dove \( A^T \) indica la matrice trasposta di \( A \), e \( I \) è la matrice identità di dimensione opportuna.</p>
+<p>In altre parole, una matrice ortogonale \( A \) soddisfa la proprietà per cui la moltiplicazione di \( A \) per la sua trasposta dà come risultato la matrice identità. Questo implica che le colonne (e le righe) di \( A \) sono vettori ortonormali.</p>
 
-    <h3>Proprietà</h3>
-    <ul>
-      <li>Le matrici ortogonali hanno **determinante** pari a \( +1 \) o \( -1 \).</li>
-      <li>La trasposta di una matrice ortogonale è anche la sua **inversa**: \( A^T = A^{-1} \).</li>
-      <li>Le matrici ortogonali preservano la **norma** dei vettori, ovvero, per un vettore \( \mathbf{v} \), si ha \( \|A \mathbf{v}\| = \|\mathbf{v}\| \).</li>
-    </ul>
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Le matrici ortogonali hanno <strong>determinante</strong> pari a \( +1 \) o \( -1 \).</li>
+    <li>La trasposta di una matrice ortogonale è anche la sua <strong>inversa</strong>: \( A^T = A^{-1} \).</li>
+    <li>Le matrici ortogonali preservano la <strong>norma</strong> dei vettori, ovvero, per un vettore \( \mathbf{v} \), si ha \( \|A \mathbf{v}\| = \|\mathbf{v}\| \).</li>
+  </ul>
+</div>
 
-    <h3>Esempio</h3>
-    <p>Consideriamo la matrice:</p>
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo la matrice:</p>
+  <div class="math-container">
     \[
     A = \begin{bmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\ 1/\sqrt{2} & 1/\sqrt{2} \end{bmatrix}
     \]
-    <p>Calcoliamo la trasposta di \( A \):</p>
+  </div>
+  <p>Calcoliamo la trasposta di \( A \):</p>
+  <div class="math-container">
     \[
     A^T = \begin{bmatrix} 1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & 1/\sqrt{2} \end{bmatrix}
     \]
-    <p>Verifichiamo se \( A A^T = I \):</p>
+  </div>
+  <p>Verifichiamo se \( A A^T = I \):</p>
+  <div class="math-container">
     \[
     A A^T = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I
     \]
-    <p>Quindi, \( A \) è una matrice ortogonale.</p>
+  </div>
+  <p>Quindi, \( A \) è una matrice ortogonale.</p>
+</div>
 
-    <h3>Casi Particolari</h3>
-    <ul>
-      <li><strong>Matrice Identità:</strong> La matrice identità \( I \) è un esempio particolare di matrice ortogonale, poiché le sue colonne sono vettori ortonormali.</li>
-      <li><strong>Rotazioni nello spazio euclideo:</strong> Le matrici di rotazione sono matrici ortogonali, poiché preservano la norma dei vettori e mantengono l'ortonormalità.</li>
-    </ul>
-
-    <p>In conclusione, una matrice ortogonale è una matrice che rappresenta trasformazioni che preservano le lunghezze e gli angoli, come rotazioni e riflessioni. Questa proprietà è fondamentale in molte applicazioni, tra cui la grafica computerizzata e l'analisi dei dati.</p>
-  </details>
-
-</details>
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Matrice Identità:</strong> La matrice identità \( I \) è un esempio particolare di matrice ortogonale, poiché le sue colonne sono vettori ortonormali.</li>
+    <li><strong>Rotazioni nello spazio euclideo:</strong> Le matrici di rotazione sono matrici ortogonali, poiché preservano la norma dei vettori e mantengono l'ortonormalità.</li>
+  </ul>
+  <p>In conclusione, una matrice ortogonale è una matrice che rappresenta trasformazioni che preservano le lunghezze e gli angoli, come rotazioni e riflessioni. Questa proprietà è fondamentale in molte applicazioni, tra cui la grafica computerizzata e l'analisi dei dati.</p>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Ortonormale</title>
+</head>
+<body>
+
+<h1>Ortonormale</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Un insieme di vettori è detto <strong>ortonormale</strong> se i vettori sono <strong>ortogonali</strong> tra loro e ognuno ha <strong>norma pari a 1</strong>.</p>
+
+<h2>Definizione Completa</h2>
+<p>Un insieme di vettori \( \{ \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \} \) in uno spazio vettoriale \( V \) con un prodotto scalare definito si dice <strong>ortonormale</strong> se soddisfa le seguenti condizioni:</p>
+<ul>
+  <li>I vettori sono <strong>ortogonali</strong> tra loro: per ogni coppia di vettori distinti \( \mathbf{v}_i, \mathbf{v}_j \) con \( i \neq j \), vale \( \mathbf{v}_i \cdot \mathbf{v}_j = 0 \).</li>
+  <li>Ogni vettore ha <strong>norma pari a 1</strong>: per ogni vettore \( \mathbf{v}_i \), vale \( \|\mathbf{v}_i\| = 1 \).</li>
+</ul>
+<p>In altre parole, un insieme ortonormale è un insieme di vettori che sono sia <strong>mutuamente ortogonali</strong> sia di <strong>lunghezza unitaria</strong>. Questi vettori formano una base particolarmente utile per uno spazio vettoriale, poiché semplificano molte operazioni algebriche, come il calcolo delle coordinate e delle proiezioni.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Se un insieme di vettori è <strong>ortonormale</strong>, allora i vettori sono <strong>linearmente indipendenti</strong> e formano una <strong>base</strong> per il sottospazio da essi generato.</li>
+    <li>La rappresentazione di un vettore rispetto a una base ortonormale è particolarmente semplice, poiché le coordinate del vettore sono date dai prodotti scalari con i vettori della base.</li>
+    <li>Il <strong>prodotto scalare</strong> tra due vettori di un insieme ortonormale è sempre zero per vettori distinti e uno per il vettore con sé stesso:</li>
+    <div class="math-container">
+      \[
+      \mathbf{v}_i \cdot \mathbf{v}_j = \delta_{ij}
+      \]
+    </div>
+    dove \( \delta_{ij} \) è il <strong>delta di Kronecker</strong>, che vale 1 se \( i = j \) e 0 altrimenti.
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo lo spazio vettoriale \( \mathbb{R}^3 \) e l'insieme di vettori:</p>
+  <div class="math-container">
+    \[
+    \mathbf{v}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \quad \mathbf{v}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \quad \mathbf{v}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+    \]
+  </div>
+  <p>Questi vettori formano un insieme <strong>ortonormale</strong>, poiché:</p>
+  <ul>
+    <li>Ogni vettore ha norma pari a 1: \( \|\mathbf{v}_1\| = \|\mathbf{v}_2\| = \|\mathbf{v}_3\| = 1 \).</li>
+    <li>I vettori sono <strong>ortogonali</strong> tra loro: \( \mathbf{v}_i \cdot \mathbf{v}_j = 0 \) per ogni coppia di vettori distinti.</li>
+  </ul>
+  <p>Quindi, \( \{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \} \) è una <strong>base ortonormale</strong> di \( \mathbb{R}^3 \).</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Normalizzazione:</strong> Dato un insieme di vettori <strong>ortogonali</strong>, è possibile ottenere un insieme ortonormale <strong>normalizzando</strong> ciascun vettore, ovvero dividendo ogni vettore per la sua norma.</li>
+    <li><strong>Teorema di Gram-Schmidt:</strong> Il <strong>procedimento di Gram-Schmidt</strong> permette di trasformare un insieme di vettori linearmente indipendenti in un insieme <strong>ortonormale</strong>, preservando il sottospazio generato dai vettori originali.</li>
+    <li><strong>Spazi Euclidei:</strong> In uno spazio euclideo, le basi ortonormali sono molto utili per semplificare calcoli di proiezioni, coordinate e altre operazioni algebriche, grazie alla proprietà di ortogonalità e norma unitaria.</li>
+  </ul>
+  <p>In conclusione, un insieme ortonormale di vettori è un insieme di vettori che sono mutuamente ortogonali e di norma unitaria. Le basi ortonormali sono particolarmente importanti in algebra lineare poiché semplificano molti calcoli e forniscono rappresentazioni semplici per i vettori nello spazio.</p>
+</div>
+
+</body>
+</html>
