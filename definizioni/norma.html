@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Norma</title>
+</head>
+<body>
+
+<h1>Norma</h1>
+
+<h2>Definizione Rapida</h2>
+<p>La <strong>norma</strong> di un vettore è una misura della sua lunghezza o grandezza. È una funzione che associa a ogni vettore un numero reale non negativo, rappresentando la distanza del vettore dall'origine.</p>
+
+<h2>Definizione Completa</h2>
+<p>La <strong>norma</strong> di un vettore \( \mathbf{v} \in \mathbb{R}^n \) è una misura della sua lunghezza o grandezza. La norma di un vettore è una funzione che associa a ogni vettore un numero reale non negativo, ed è denotata con \( \|\mathbf{v}\| \). La norma può essere definita in diversi modi a seconda del tipo di norma utilizzata. Le norme più comuni sono:</p>
+
+<ul>
+  <li><strong>Norma Euclidea (o Norma 2):</strong> La <strong>norma euclidea</strong> di un vettore \( \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix} \) è data da:
+  <div class="math-container">
+    \[
+    \|\mathbf{v}\|_2 = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2} = \sqrt{\sum_{i=1}^n v_i^2}
+    \]
+  </div>
+  </li>
+  <li><strong>Norma 1:</strong> La <strong>norma 1</strong> di un vettore è data dalla somma dei valori assoluti delle sue componenti:
+  <div class="math-container">
+    \[
+    \|\mathbf{v}\|_1 = |v_1| + |v_2| + \dots + |v_n| = \sum_{i=1}^n |v_i|
+    \]
+  </div>
+  </li>
+  <li><strong>Norma Infinito:</strong> La <strong>norma infinito</strong> di un vettore è il massimo valore assoluto tra le sue componenti:
+  <div class="math-container">
+    \[
+    \|\mathbf{v}\|_\infty = \max \{ |v_1|, |v_2|, \dots, |v_n| \}
+    \]
+  </div>
+  </li>
+</ul>
+
+<p>Le norme sono utilizzate per misurare la "distanza" di un vettore dall'origine e hanno molte applicazioni in algebra lineare, analisi funzionale e geometria.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Positività:</strong> La norma di un vettore è sempre maggiore o uguale a zero (\( \|\mathbf{v}\| \geq 0 \)) e vale zero solo se il vettore è il vettore nullo (\( \|\mathbf{v}\| = 0 \iff \mathbf{v} = \mathbf{0} \)).</li>
+    <li><strong>Omogeneità:</strong> Per ogni scalare reale \( \alpha \) e per ogni vettore \( \mathbf{v} \), vale \( \|\alpha \mathbf{v}\| = |\alpha| \|\mathbf{v}\| \).</li>
+    <li><strong>Disuguaglianza triangolare:</strong> Per ogni coppia di vettori \( \mathbf{u} \) e \( \mathbf{v} \), vale \( \|\mathbf{u} + \mathbf{v}\| \leq \|\mathbf{u}\| + \|\mathbf{v}\| \).</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo il vettore \( \mathbf{v} \in \mathbb{R}^3 \) dato da:</p>
+  <div class="math-container">
+    \[
+    \mathbf{v} = \begin{bmatrix} 3 \\ -4 \\ 1 \end{bmatrix}
+    \]
+  </div>
+  <p>Calcoliamo la <strong>norma euclidea</strong> (norma 2) di \( \mathbf{v} \):</p>
+  <div class="math-container">
+    \[
+    \|\mathbf{v}\|_2 = \sqrt{3^2 + (-4)^2 + 1^2} = \sqrt{9 + 16 + 1} = \sqrt{26}
+    \]
+  </div>
+  <p>La <strong>norma 1</strong> di \( \mathbf{v} \) è data da:</p>
+  <div class="math-container">
+    \[
+    \|\mathbf{v}\|_1 = |3| + |-4| + |1| = 3 + 4 + 1 = 8
+    \]
+  </div>
+  <p>La <strong>norma infinito</strong> di \( \mathbf{v} \) è il valore massimo tra le componenti in valore assoluto:</p>
+  <div class="math-container">
+    \[
+    \|\mathbf{v}\|_\infty = \max \{ |3|, |-4|, |1| \} = 4
+    \]
+  </div>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Norma del Vettore Nullo:</strong> La norma del <strong>vettore nullo</strong> è sempre zero: \( \|\mathbf{0}\| = 0 \).</li>
+    <li><strong>Norma Unitaria:</strong> Un vettore \( \mathbf{v} \) si dice <strong>unitario</strong> se la sua norma è uguale a 1: \( \|\mathbf{v}\| = 1 \). I vettori unitari sono spesso utilizzati per rappresentare direzioni senza tener conto della grandezza.</li>
+    <li><strong>Disuguaglianza di Cauchy-Schwarz:</strong> Per qualsiasi coppia di vettori \( \mathbf{u} \) e \( \mathbf{v} \), vale la <strong>disuguaglianza di Cauchy-Schwarz</strong>: \( |\mathbf{u} \cdot \mathbf{v}| \leq \|\mathbf{u}\| \|\mathbf{v}\| \).</li>
+  </ul>
+  <p>In conclusione, la norma di un vettore è una misura della sua lunghezza o grandezza, ed è uno strumento fondamentale per definire distanze e relazioni tra vettori in uno spazio vettoriale. Esistono diverse tipologie di norma, ognuna con caratteristiche e applicazioni specifiche in algebra lineare e analisi matematica.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Versore</title>
+</head>
+<body>
+
+<h1>Versore</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Un <strong>versore</strong> è un vettore che ha <strong>norma pari a 1</strong>. Viene anche detto vettore unitario e rappresenta solo la direzione e il verso, senza tenere conto della grandezza.</p>
+
+<h2>Definizione Completa</h2>
+<p>Un <strong>versore</strong> (o <strong>vettore unitario</strong>) è un vettore che ha <strong>norma</strong> pari a 1. I versori sono utilizzati per rappresentare direzioni nello spazio senza considerare la grandezza del vettore. Dato un vettore qualsiasi \( \mathbf{v} \in \mathbb{R}^n \), il versore corrispondente è il vettore che ha la stessa direzione e verso di \( \mathbf{v} \), ma con una lunghezza pari a 1.</p>
+
+<p>Per ottenere il versore di un vettore non nullo \( \mathbf{v} \), è sufficiente dividere il vettore per la sua <strong>norma</strong>. Se la norma del vettore \( \mathbf{v} \) è \( \|\mathbf{v}\| \), allora il versore \( \hat{\mathbf{v}} \) è dato da:</p>
+<div class="math-container">
+  \[
+  \hat{\mathbf{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|}
+  \]
+</div>
+<p>Dove \( \|\mathbf{v}\| \) rappresenta la norma del vettore, che può essere la norma euclidea (o altre norme in base al contesto).</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>La <strong>norma</strong> di un versore è sempre pari a 1: \( \|\hat{\mathbf{v}}\| = 1 \).</li>
+    <li>Un versore rappresenta la <strong>direzione</strong> di un vettore nello spazio, indipendentemente dalla sua grandezza.</li>
+    <li>I versori sono spesso utilizzati per descrivere direzioni in geometria, fisica e altre applicazioni scientifiche.</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo il vettore \( \mathbf{v} \in \mathbb{R}^3 \) dato da:</p>
+  <div class="math-container">
+    \[
+    \mathbf{v} = \begin{bmatrix} 3 \\ -4 \\ 0 \end{bmatrix}
+    \]
+  </div>
+  <p>Calcoliamo la <strong>norma euclidea</strong> di \( \mathbf{v} \):</p>
+  <div class="math-container">
+    \[
+    \|\mathbf{v}\| = \sqrt{3^2 + (-4)^2 + 0^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+    \]
+  </div>
+  <p>Il <strong>versore</strong> \( \hat{\mathbf{v}} \) corrispondente a \( \mathbf{v} \) è dato da:</p>
+  <div class="math-container">
+    \[
+    \hat{\mathbf{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|} = \frac{1}{5} \begin{bmatrix} 3 \\ -4 \\ 0 \end{bmatrix} = \begin{bmatrix} 0.6 \\ -0.8 \\ 0 \end{bmatrix}
+    \]
+  </div>
+  <p>Il versore \( \hat{\mathbf{v}} \) ha la stessa direzione e verso di \( \mathbf{v} \), ma la sua lunghezza è pari a 1.</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Vettore Nullo:</strong> Il <strong>vettore nullo</strong> non ha un versore, poiché la sua norma è zero e non è possibile dividere per zero.</li>
+    <li><strong>Versori dei Vettori Standard:</strong> In \( \mathbb{R}^n \), i <strong>vettori standard</strong> (o <strong>vettori canonici</strong>) \( \mathbf{e}_i \) sono versori, in quanto hanno norma pari a 1 e rappresentano le direzioni degli assi cartesiani. Ad esempio, in \( \mathbb{R}^3 \):</li>
+    <div class="math-container">
+      \[
+      \mathbf{e}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \quad \mathbf{e}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \quad \mathbf{e}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+      \]
+    </div>
+    <li><strong>Utilizzo in Fisica:</strong> I versori sono comunemente usati in fisica per rappresentare direzioni di forze, velocità e altri vettori, indipendentemente dalla loro grandezza. Ad esempio, il versore \( \hat{\mathbf{r}} \) è spesso utilizzato per indicare la direzione di un vettore posizione rispetto a un'origine.</li>
+  </ul>
+  <p>In conclusione, un versore è un vettore di norma 1 che rappresenta una direzione nello spazio vettoriale. È utilizzato per isolare la direzione di un vettore, indipendentemente dalla sua lunghezza, ed è uno strumento essenziale in molte applicazioni scientifiche e ingegneristiche.</p>
+</div>
+
+</body>
+</html>

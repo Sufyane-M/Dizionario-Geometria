@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Ortogonale di un Sottoinsieme</title>
+</head>
+<body>
+
+<h1>Ortogonale di un Sottoinsieme</h1>
+
+<h2>Definizione Rapida</h2>
+<p>L'<strong>ortogonale</strong> di un sottoinsieme \( S \) di uno spazio vettoriale è l'insieme di tutti i vettori che sono <strong>ortogonali</strong> a ogni vettore di \( S \). L'ortogonale di \( S \) è spesso denotato con \( S^\perp \).</p>
+
+<h2>Definizione Completa</h2>
+<p>Dato uno spazio vettoriale \( V \) con prodotto scalare definito, l'<strong>ortogonale</strong> di un sottoinsieme \( S \subseteq V \) è l'insieme di tutti i vettori di \( V \) che sono <strong>ortogonali</strong> a ogni vettore di \( S \). Formalmente, l'ortogonale di \( S \), denotato con \( S^\perp \), è definito come:</p>
+<div class="math-container">
+  \[
+  S^\perp = \{ \mathbf{v} \in V \mid \mathbf{v} \cdot \mathbf{u} = 0, \ \forall \mathbf{u} \in S \}
+  \]
+</div>
+<p>Dove \( \mathbf{v} \cdot \mathbf{u} \) rappresenta il <strong>prodotto scalare</strong> tra i vettori \( \mathbf{v} \) e \( \mathbf{u} \). L'ortogonale di un sottoinsieme contiene tutti i vettori che sono perpendicolari a ciascun vettore del sottoinsieme dato.</p>
+
+<p>L'ortogonale di \( S \) è uno <strong>spazio vettoriale</strong> e ha proprietà particolarmente rilevanti nel contesto delle <strong>proiezioni ortogonali</strong>, della <strong>decomposizione ortogonale</strong> e dell'<strong>analisi degli spazi vettoriali</strong>.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>\( S^\perp \) è sempre uno <strong>spazio vettoriale</strong> di \( V \).</li>
+    <li>Se \( S \) è un sottospazio di \( V \), allora \( S \cap S^\perp = \{ \mathbf{0} \} \), ovvero l'intersezione tra \( S \) e il suo ortogonale contiene solo il <strong>vettore nullo</strong>.</li>
+    <li>La dimensione di \( S \) e quella del suo ortogonale \( S^\perp \) soddisfano la relazione:</li>
+    <div class="math-container">
+      \[
+      \dim(S) + \dim(S^\perp) = \dim(V)
+      \]
+    </div>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo lo spazio vettoriale \( \mathbb{R}^3 \) e il sottospazio \( S \) generato dal vettore \( \mathbf{u} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \). L'ortogonale di \( S \), denotato con \( S^\perp \), è l'insieme di tutti i vettori \( \mathbf{v} = \begin{bmatrix} x \\ y \\ z \end{bmatrix} \) tali che:</p>
+  <div class="math-container">
+    \[
+    \mathbf{u} \cdot \mathbf{v} = 1 \cdot x + 2 \cdot y + 3 \cdot z = 0
+    \]
+  </div>
+  <p>Questa equazione definisce un piano nello spazio \( \mathbb{R}^3 \), che è il sottospazio ortogonale a \( S \). Tutti i vettori \( \mathbf{v} \) che soddisfano questa equazione appartengono a \( S^\perp \).</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Ortogonale dello Spazio Intero:</strong> Se \( S = V \), allora \( S^\perp = \{ \mathbf{0} \} \), poiché non ci sono vettori in \( V \) ortogonali a tutti i vettori di \( V \) eccetto il vettore nullo.</li>
+    <li><strong>Ortogonale del Vettore Nullo:</strong> Se \( S = \{ \mathbf{0} \} \), allora \( S^\perp = V \), poiché tutti i vettori di \( V \) sono ortogonali al vettore nullo.</li>
+    <li><strong>Decomposizione Ortogonale:</strong> Ogni vettore in uno spazio vettoriale \( V \) può essere scritto come somma di un vettore in \( S \) e di un vettore in \( S^\perp \), secondo il <strong>teorema della decomposizione ortogonale</strong>.</li>
+  </ul>
+  <p>In conclusione, l'ortogonale di un sottoinsieme di uno spazio vettoriale è costituito da tutti i vettori che sono perpendicolari a ogni vettore del sottoinsieme. Questo concetto è fondamentale per comprendere la struttura degli spazi vettoriali, le proiezioni ortogonali e le decomposizioni in algebra lineare.</p>
+</div>
+
+</body>
+</html>

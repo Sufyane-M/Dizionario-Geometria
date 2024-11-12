@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Molteplicità Geometrica</title>
+</head>
+<body>
+
+<h1>Molteplicità Geometrica</h1>
+
+<h2>Definizione Rapida</h2>
+<p>La <strong>molteplicità geometrica</strong> di un autovalore di una matrice è il numero di autovettori linearmente indipendenti associati a quell'autovalore. Equivale alla dimensione del <strong>nucleo</strong> della matrice \( A - \lambda I \).</p>
+
+<h2>Definizione Completa</h2>
+<p>La <strong>molteplicità geometrica</strong> di un autovalore \( \lambda \) di una matrice quadrata \( A \) è la dimensione del sottospazio degli autovettori associati a \( \lambda \). Formalmente, è la dimensione del <strong>nucleo</strong> (o <strong>kernel</strong>) della matrice \( A - \lambda I \), ovvero il numero di autovettori linearmente indipendenti che corrispondono all'autovalore \( \lambda \).</p>
+
+<p>Se \( A \) è una matrice quadrata di ordine \( n \), allora l'autovalore \( \lambda \) è una soluzione dell'equazione caratteristica \( \text{det}(A - \lambda I) = 0 \). La molteplicità geometrica di \( \lambda \) è il numero di vettori linearmente indipendenti che risolvono l'equazione:</p>
+<div class="math-container">
+  \[
+  (A - \lambda I) \mathbf{v} = \mathbf{0}
+  \]
+</div>
+<p>La molteplicità geometrica è sempre minore o uguale alla <strong>molteplicità algebrica</strong> dell'autovalore.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>La <strong>molteplicità geometrica</strong> di un autovalore è sempre minore o uguale alla sua <strong>molteplicità algebrica</strong>.</li>
+    <li>La molteplicità geometrica rappresenta la dimensione del sottospazio degli autovettori associati a un dato autovalore, ed è un indicatore della <strong>diagonalizzabilità</strong> della matrice.</li>
+    <li>Una matrice è <strong>diagonalizzabile</strong> se, per ogni autovalore, la molteplicità geometrica è uguale alla molteplicità algebrica.</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo la matrice quadrata \( A \) di ordine 2:</p>
+  <div class="math-container">
+    \[
+    A = \begin{bmatrix} 2 & 1 \\ 0 & 2 \end{bmatrix}
+    \]
+  </div>
+  <p>Calcoliamo il polinomio caratteristico \( p(\lambda) \):</p>
+  <div class="math-container">
+    \[
+    p(\lambda) = \text{det}(A - \lambda I) = (2 - \lambda)^2
+    \]
+  </div>
+  <p>Il polinomio caratteristico ha l'autovalore \( \lambda = 2 \) con <strong>molteplicità algebrica</strong> pari a 2.</p>
+  <p>Calcoliamo la <strong>molteplicità geometrica</strong> dell'autovalore \( \lambda = 2 \) risolvendo il sistema:</p>
+  <div class="math-container">
+    \[
+    (A - 2I) \mathbf{v} = \mathbf{0}
+    \]
+    \[
+    \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+    \]
+  </div>
+  <p>Da questa equazione otteniamo che \( x_2 \) è libero, quindi c'è un unico autovettore linearmente indipendente associato all'autovalore \( \lambda = 2 \). La <strong>molteplicità geometrica</strong> è quindi pari a 1.</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Molteplicità Geometrica uguale alla Molteplicità Algebrica:</strong> Se la <strong>molteplicità geometrica</strong> di un autovalore è uguale alla sua <strong>molteplicità algebrica</strong>, la matrice è <strong>diagonalizzabile</strong> rispetto a quell'autovalore.</li>
+    <li><strong>Molteplicità Geometrica Minore della Molteplicità Algebrica:</strong> Se la molteplicità geometrica di un autovalore è minore della sua molteplicità algebrica, la matrice <strong>non è diagonalizzabile</strong>.</li>
+    <li><strong>Autovalori Semplici:</strong> Se un autovalore ha <strong>molteplicità algebrica</strong> pari a 1, allora la sua <strong>molteplicità geometrica</strong> è necessariamente pari a 1, e l'autovalore è detto <strong>semplice</strong>.</li>
+  </ul>
+  <p>In conclusione, la molteplicità geometrica di un autovalore indica il numero di autovettori linearmente indipendenti associati a quell'autovalore, ed è fondamentale per comprendere la diagonalizzabilità di una matrice. Se la molteplicità geometrica coincide con la molteplicità algebrica per tutti gli autovalori, la matrice è diagonalizzabile.</p>
+</div>
+
+</body>
+</html>

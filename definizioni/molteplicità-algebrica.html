@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Molteplicità Algebrica</title>
+</head>
+<body>
+
+<h1>Molteplicità Algebrica</h1>
+
+<h2>Definizione Rapida</h2>
+<p>La <strong>molteplicità algebrica</strong> di un autovalore di una matrice è il numero di volte che quell'autovalore compare come radice del polinomio caratteristico della matrice.</p>
+
+<h2>Definizione Completa</h2>
+<p>La <strong>molteplicità algebrica</strong> di un autovalore \( \lambda \) di una matrice quadrata \( A \) è il numero di volte che \( \lambda \) compare come radice del <strong>polinomio caratteristico</strong> della matrice. In altre parole, la molteplicità algebrica di un autovalore rappresenta il grado di radice del polinomio caratteristico associato all'autovalore stesso.</p>
+
+<p>Consideriamo una matrice quadrata \( A \) di ordine \( n \) e il suo polinomio caratteristico \( p(\lambda) = \text{det}(A - \lambda I) \). Se un autovalore \( \lambda \) è una radice del polinomio caratteristico di molteplicità \( k \), allora diciamo che la <strong>molteplicità algebrica</strong> di \( \lambda \) è \( k \).</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>La <strong>somma</strong> delle molteplicità algebriche di tutti gli autovalori di una matrice è uguale all'<strong>ordine</strong> della matrice.</li>
+    <li>La molteplicità algebrica di un autovalore è sempre maggiore o uguale alla <strong>molteplicità geometrica</strong> dello stesso autovalore, che rappresenta il numero di autovettori linearmente indipendenti associati all'autovalore.</li>
+    <li>Se la molteplicità algebrica di un autovalore è pari a 1, l'autovalore si dice <strong>semplice</strong>.</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo la matrice quadrata \( A \) di ordine 2:</p>
+  <div class="math-container">
+    \[
+    A = \begin{bmatrix} 2 & 1 \\ 0 & 2 \end{bmatrix}
+    \]
+  </div>
+  <p>Calcoliamo il polinomio caratteristico \( p(\lambda) \) di \( A \):</p>
+  <div class="math-container">
+    \[
+    p(\lambda) = \text{det}(A - \lambda I) = \text{det}\left( \begin{bmatrix} 2 - \lambda & 1 \\ 0 & 2 - \lambda \end{bmatrix} \right) = (2 - \lambda)^2
+    \]
+  </div>
+  <p>Il polinomio caratteristico è:</p>
+  <div class="math-container">
+    \[
+    p(\lambda) = (\lambda - 2)^2
+    \]
+  </div>
+  <p>Da questo polinomio possiamo vedere che l'autovalore \( \lambda = 2 \) ha <strong>molteplicità algebrica</strong> pari a 2, poiché compare come radice del polinomio caratteristico due volte.</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Molteplicità Algebrica vs Molteplicità Geometrica:</strong> La <strong>molteplicità geometrica</strong> di un autovalore è il numero di autovettori linearmente indipendenti associati a quell'autovalore. La molteplicità algebrica è sempre maggiore o uguale alla molteplicità geometrica.</li>
+    <li><strong>Molteplicità Algebrica Semplice:</strong> Se la molteplicità algebrica di un autovalore è pari a 1, si dice che l'autovalore è <strong>semplice</strong>. In tal caso, la molteplicità geometrica coincide con la molteplicità algebrica.</li>
+    <li><strong>Teorema di Cayley-Hamilton:</strong> Il <strong>teorema di Cayley-Hamilton</strong> afferma che ogni matrice soddisfa il proprio polinomio caratteristico. Questo implica che le radici del polinomio caratteristico e le loro molteplicità algebriche giocano un ruolo fondamentale nella rappresentazione della matrice stessa.</li>
+  </ul>
+  <p>In conclusione, la molteplicità algebrica di un autovalore è una proprietà importante che descrive quante volte un autovalore compare come radice del polinomio caratteristico di una matrice. Essa fornisce informazioni essenziali per comprendere la struttura degli autovalori e degli autovettori di una matrice e per studiare le sue proprietà in algebra lineare.</p>
+</div>
+
+</body>
+</html>

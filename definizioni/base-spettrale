@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Base Spettrale</title>
+</head>
+<body>
+
+<h1>Base Spettrale</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Una <strong>base spettrale</strong> di uno spazio vettoriale è una base costituita dagli autovettori di un operatore lineare. La base spettrale esiste se l'operatore è diagonalizzabile.</p>
+
+<h2>Definizione Completa</h2>
+<p>Una <strong>base spettrale</strong> di uno spazio vettoriale \( V \) associata a un operatore lineare \( T: V \to V \) è una base formata da autovettori dell'operatore \( T \). In altre parole, una base spettrale è una base in cui la matrice associata all'operatore \( T \) è una matrice diagonale, i cui elementi sulla diagonale sono gli autovalori dell'operatore.</p>
+
+<p>Affinché esista una base spettrale, l'operatore lineare deve essere <strong>diagonalizzabile</strong>, il che significa che deve esistere un insieme di autovettori linearmente indipendenti che costituiscono una base per lo spazio vettoriale. Se \( A \) è la matrice associata all'operatore rispetto a una base qualsiasi, allora \( A \) è diagonalizzabile se è possibile trovare una matrice invertibile \( P \) tale che:</p>
+<div class="math-container">
+  \[
+  P^{-1} A P = D
+  \]
+</div>
+<p>dove \( D \) è una matrice diagonale contenente gli autovalori di \( A \). Gli autovettori corrispondenti agli autovalori formano la <strong>base spettrale</strong>.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Una base spettrale è formata da <strong>autovettori</strong> linearmente indipendenti dell'operatore lineare.</li>
+    <li>Una matrice è <strong>diagonalizzabile</strong> se e solo se esiste una base spettrale per lo spazio vettoriale associato.</li>
+    <li>Gli <strong>autovalori</strong> dell'operatore lineare sono gli elementi della matrice diagonale che si ottiene rappresentando l'operatore rispetto alla base spettrale.</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo la matrice quadrata \( A \) di ordine 2:</p>
+  <div class="math-container">
+    \[
+    A = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix}
+    \]
+  </div>
+  <p>Calcoliamo gli <strong>autovalori</strong> di \( A \) risolvendo l'equazione caratteristica:</p>
+  <div class="math-container">
+    \[
+    \text{det}(A - \lambda I) = (3 - \lambda)(2 - \lambda) = 0
+    \]
+  </div>
+  <p>Gli autovalori sono \( \lambda_1 = 3 \) e \( \lambda_2 = 2 \).</p>
+  <p>Ora troviamo gli <strong>autovettori</strong> associati. Per \( \lambda_1 = 3 \):</p>
+  <div class="math-container">
+    \[
+    (A - 3I)\mathbf{v} = \begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+    \]
+  </div>
+  <p>Da cui otteniamo \( x_2 = 0 \), quindi un autovettore associato è \( \mathbf{v}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \).</p>
+  <p>Per \( \lambda_2 = 2 \):</p>
+  <div class="math-container">
+    \[
+    (A - 2I)\mathbf{v} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+    \]
+  </div>
+  <p>Da cui otteniamo \( x_1 + x_2 = 0 \), quindi un autovettore associato è \( \mathbf{v}_2 = \begin{bmatrix} -1 \\ 1 \end{bmatrix} \).</p>
+  <p>I due autovettori \( \mathbf{v}_1 \) e \( \mathbf{v}_2 \) formano una <strong>base spettrale</strong> per lo spazio vettoriale associato alla matrice \( A \), poiché sono linearmente indipendenti e corrispondono agli autovalori di \( A \).</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Matrice Diagonalizzabile:</strong> Una matrice è <strong>diagonalizzabile</strong> se è possibile trovare una base spettrale per lo spazio vettoriale, ovvero se esiste un numero sufficiente di autovettori linearmente indipendenti.</li>
+    <li><strong>Molteplicità Algebrica e Geometrica:</strong> Se la <strong>molteplicità geometrica</strong> di ogni autovalore è uguale alla sua <strong>molteplicità algebrica</strong>, allora la matrice è diagonalizzabile e ha una base spettrale.</li>
+    <li><strong>Autovalori Distinti:</strong> Se una matrice quadrata ha <strong>autovalori distinti</strong>, allora essa è sempre diagonalizzabile e possiede una base spettrale formata dagli autovettori corrispondenti.</li>
+  </ul>
+  <p>In conclusione, una base spettrale è una base costituita dagli autovettori di un operatore lineare e permette di rappresentare l'operatore nella sua forma diagonale. La diagonalizzabilità di una matrice è strettamente legata all'esistenza di una base spettrale, e la molteplicità geometrica degli autovalori gioca un ruolo fondamentale in questa proprietà.</p>
+</div>
+
+</body>
+</html>

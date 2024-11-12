@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="style-definizione.css">
+  <title>Definizione: Prodotto Scalare</title>
+</head>
+<body>
+
+<h1>Prodotto Scalare</h1>
+
+<h2>Definizione Rapida</h2>
+<p>Il <strong>prodotto scalare</strong> tra due vettori in uno spazio vettoriale euclideo è un'operazione che associa a due vettori un numero reale. Rappresenta una misura della "proiezione" di un vettore sull'altro.</p>
+
+<h2>Definizione Completa</h2>
+<p>Il <strong>prodotto scalare</strong> (o <strong>prodotto interno</strong> o <strong>prodotto punto</strong>) tra due vettori \( \mathbf{u}, \mathbf{v} \in \mathbb{R}^n \) è un'operazione che restituisce un numero reale, calcolato come la somma dei prodotti delle componenti corrispondenti dei due vettori. Formalmente, dati i vettori:</p>
+<div class="math-container">
+  \[
+  \mathbf{u} = \begin{bmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{bmatrix}, \quad \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
+  \]
+</div>
+<p>il prodotto scalare è definito come:</p>
+<div class="math-container">
+  \[
+  \mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2 + \dots + u_n v_n = \sum_{i=1}^n u_i v_i
+  \]
+</div>
+<p>Il prodotto scalare è utilizzato per misurare la <strong>proiezione</strong> di un vettore su un altro e per determinare l'<strong>angolo</strong> tra i vettori. Se il prodotto scalare è zero, i vettori sono <strong>ortogonali</strong>.</p>
+
+<h3 class="special-header">Proprietà</h3>
+<div class="callout">
+  <ul>
+    <li>Il prodotto scalare è <strong>commutativo</strong>: \( \mathbf{u} \cdot \mathbf{v} = \mathbf{v} \cdot \mathbf{u} \).</li>
+    <li>È <strong>distributivo</strong> rispetto alla somma di vettori: \( \mathbf{u} \cdot (\mathbf{v} + \mathbf{w}) = \mathbf{u} \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{w} \).</li>
+    <li>È <strong>associativo</strong> rispetto alla moltiplicazione per uno scalare: \( (c\mathbf{u}) \cdot \mathbf{v} = c (\mathbf{u} \cdot \mathbf{v}) \), con \( c \in \mathbb{R} \).</li>
+    <li>Il prodotto scalare tra un vettore e sé stesso è uguale al <strong>quadrato della norma</strong> del vettore: \( \mathbf{u} \cdot \mathbf{u} = \|\mathbf{u}\|^2 \).</li>
+  </ul>
+</div>
+
+<h3 class="special-header">Esempio</h3>
+<div class="callout">
+  <p>Consideriamo due vettori in \( \mathbb{R}^3 \):</p>
+  <div class="math-container">
+    \[
+    \mathbf{u} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad \mathbf{v} = \begin{bmatrix} 4 \\ -1 \\ 2 \end{bmatrix}
+    \]
+  </div>
+  <p>Il <strong>prodotto scalare</strong> tra \( \mathbf{u} \) e \( \mathbf{v} \) è dato da:</p>
+  <div class="math-container">
+    \[
+    \mathbf{u} \cdot \mathbf{v} = (1 \cdot 4) + (2 \cdot -1) + (3 \cdot 2) = 4 - 2 + 6 = 8
+    \]
+  </div>
+  <p>Quindi, il prodotto scalare è \( 8 \).</p>
+</div>
+
+<h3 class="special-header">Casi Particolari</h3>
+<div class="callout">
+  <ul>
+    <li><strong>Vettori Ortogonali:</strong> Due vettori sono <strong>ortogonali</strong> se il loro prodotto scalare è zero. Ad esempio, i vettori \( \mathbf{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \) e \( \mathbf{v} = \begin{bmatrix} -2 \\ 1 \end{bmatrix} \) sono ortogonali, poiché \( \mathbf{u} \cdot \mathbf{v} = 1 \cdot (-2) + 2 \cdot 1 = -2 + 2 = 0 \).</li>
+    <li><strong>Norma di un Vettore:</strong> Il <strong>prodotto scalare</strong> di un vettore con sé stesso fornisce il <strong>quadrato della norma</strong> del vettore. Per il vettore \( \mathbf{u} = \begin{bmatrix} 3 \\ 4 \end{bmatrix} \), abbiamo \( \mathbf{u} \cdot \mathbf{u} = 3^2 + 4^2 = 9 + 16 = 25 \), quindi la norma di \( \mathbf{u} \) è \( \|\mathbf{u}\| = \sqrt{25} = 5 \).</li>
+    <li><strong>Angolo tra Vettori:</strong> Il prodotto scalare può essere utilizzato per calcolare l'<strong>angolo</strong> \( \theta \) tra due vettori mediante la formula:
+    <div class="math-container">
+      \[
+      \mathbf{u} \cdot \mathbf{v} = \|\mathbf{u}\| \|\mathbf{v}\| \cos\theta
+      \]
+    </div>
+    da cui si può ottenere l'angolo come:
+    <div class="math-container">
+      \[
+      \theta = \cos^{-1}\left( \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|} \right)
+      \]
+    </div>
+    </li>
+  </ul>
+  <p>In conclusione, il prodotto scalare è un'operazione fondamentale per misurare la relazione tra due vettori in uno spazio euclideo. Permette di determinare l'angolo tra i vettori, verificare l'ortogonalità e calcolare la norma dei vettori stessi, risultando uno strumento essenziale in algebra lineare e geometria.</p>
+</div>
+
+</body>
+</html>
